@@ -16,6 +16,7 @@ export class MovieService {
 
   }
 
+  //GET HTTP method to get the JSON responce with the movies sorted by the name using my private Key
   getListOfMovies(title: string): Observable<any>{
 
     return this.http.get(`${this.url}?s=${encodeURI(title)}&type=${this.type}&apikey=${this.apiKey}`).pipe(
@@ -23,6 +24,7 @@ export class MovieService {
     );    
   }
 
+  //GET HTTP method to get the description of the selected movie
   getDescription(id){
     return this.http.get(`${this.url}?i=${id}&plot=full&apikey=${this.apiKey}`);
   }

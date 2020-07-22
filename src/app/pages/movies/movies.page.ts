@@ -18,6 +18,7 @@ export class MoviesPage implements OnInit {
   ngOnInit() {
   }
 
+  //Method for a multiple search
   otherSearch(){
     this.results = this.movieService.getListOfMovies(this.searchFilm);
   }

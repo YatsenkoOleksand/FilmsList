@@ -9,6 +9,7 @@ import { MovieService } from 'src/app/services/movie.service';
 })
 export class DescriptionPage implements OnInit {
 
+  //Global variable for the movie description
   description = null;
 
   constructor(private activatedRoute: ActivatedRoute, private movieService: MovieService) { }
@@ -16,8 +17,8 @@ export class DescriptionPage implements OnInit {
   ngOnInit() {
     let id = this.activatedRoute.snapshot.paramMap.get('id');
 
+    //Display description of the selected movie by his unique id 
     this.movieService.getDescription(id).subscribe(result => {
-      console.log('details ', result);
       this.description = result;
     });
   }

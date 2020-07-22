@@ -1,9 +1,56 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>description</ion-title>
+    <ion-buttons>
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Description</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+
+  <ion-card *ngIf="description">
+    <ion-card-header>
+      <ion-card-title>
+        {{ description.Title }}
+      </ion-card-title>
+
+      <ion-card-content>
+        
+        <ion-item>
+          <ion-text >Year: {{ description.Year }}</ion-text>
+        </ion-item>
+
+        <ion-item>
+          <ion-text>Country: {{ description.Country }}</ion-text>
+        </ion-item>
+
+        <ion-item>
+          <ion-text>Genre: {{ description.Genre }}</ion-text>
+        </ion-item>
+
+        <ion-item>
+          <ion-text>Director: {{ description.Director }}</ion-text>
+        </ion-item>
+
+        <ion-item>
+          <ion-text>Actors: {{ description.Actors }}</ion-text>
+        </ion-item>
+
+        <ion-item>
+          <ion-text>Duration: {{ description.Runtime }}</ion-text>
+        </ion-item>
+
+        <ion-item>
+          <ion-text>IMDb Rating: {{ description.imdbRating }}</ion-text>
+        </ion-item>
+
+        <ion-item>
+          <ion-text>Plot: {{ description.Plot }}</ion-text>
+        </ion-item>
+
+      </ion-card-content>
+    </ion-card-header>
+  </ion-card>
 
 </ion-content>
